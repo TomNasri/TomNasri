@@ -26,7 +26,7 @@ namespace MLB.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(new HomeViewModel(this));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
