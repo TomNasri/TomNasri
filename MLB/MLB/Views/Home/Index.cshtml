@@ -1,9 +1,10 @@
 ﻿<div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
+
     @if (Model != null && Model.IsAuthenticated)
     {
-
-
+        <a href="/Person" class="btn btn-primary btn-outline-primary">Manage people</a>
 
     }
     else

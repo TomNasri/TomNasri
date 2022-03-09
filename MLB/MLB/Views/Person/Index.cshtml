@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<table>
+
+    @foreach (var person in Model.Persons)
+    {
+        <tr>
+            <td>@Html.Raw(person.Firstname) @Html.Raw(person.Lastname)&nbsp;&nbsp;&nbsp;</td>
+            <td><a class="btn btn-outline-success btn-sm" href="/Person">See</a></td>
+            <td><a class="btn btn-outline-danger btn-sm" href="/Person">Delete</a></td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-info btn-sm" href="/Person">Add person</a>
+
+
