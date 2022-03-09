@@ -18,6 +18,7 @@ namespace MLB.Controllers
             if (username == "test")
             {
                 vm.IsAuthenticated = true;
+                vm.Login = username;
                 //[Security] Injection
                 HttpContext.Session.SetString("login", username);
 
@@ -25,6 +26,13 @@ namespace MLB.Controllers
             else
                 vm.Error = "Bad Username or password (try with test/test)";
             return View(vm);
+        }
+
+        public IActionResult Disconnect()
+        {
+            HttpContext.Session.Remove("login");
+
+            return View("index", new LoginViewModel(this));
         }
     }
 }
