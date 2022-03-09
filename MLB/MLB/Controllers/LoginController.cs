@@ -32,7 +32,7 @@ namespace MLB.Controllers
         {
             HttpContext.Session.Remove("login");
 
-            return View("index", new LoginViewModel(this));
+            return Redirect("/login");
         }
     }
 }

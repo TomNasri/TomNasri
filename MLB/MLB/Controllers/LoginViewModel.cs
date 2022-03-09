@@ -9,7 +9,6 @@ namespace MLB.Controllers
     public class LoginViewModel : HomeViewModel
     {
         public string Error { get; set; }
-        public bool IsAuthenticated { get; set; }
 
         public LoginViewModel(Controller controller) : base(controller)
         {
