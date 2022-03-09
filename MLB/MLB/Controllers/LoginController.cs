@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace MLB.Controllers
 {
@@ -10,7 +8,23 @@ namespace MLB.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new LoginViewModel(this));
+        }
+
+        [HttpPost]
+        public IActionResult Index(string username, string password)
+        {
+            LoginViewModel vm = new LoginViewModel(this);
+            if (username == "test")
+            {
+                vm.IsAuthenticated = true;
+                //[Security] Injection
+                HttpContext.Session.SetString("login", username);
+
+            }
+            else
+                vm.Error = "Bad Username or password (try with test/test)";
+            return View(vm);
         }
     }
 }

@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MLB.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MLB.Controllers
 {
@@ -20,14 +16,14 @@ namespace MLB.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new HomeViewModel(this));
         }
 
         public IActionResult Login()
         {
             return View("Login");
         }
-        
+
         public IActionResult Privacy()
         {
             return View();
