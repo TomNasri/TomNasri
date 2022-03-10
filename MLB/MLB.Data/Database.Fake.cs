@@ -9,13 +9,27 @@ namespace MLB.Data
         public void Initialize()
         {
             Persons = new List<PersonModel>();
-            Persons.Add(new PersonModel("Joe", "Diggy"));
-            Persons.Add(new PersonModel("Malcom", "Heist"));
-            Persons.Add(new PersonModel("Luke", "Marchand"));
-            Persons.Add(new PersonModel("James", "Stamom"));
+            Persons.Add(new PersonModel("Perceval", "de Galles"));
+            Persons.Add(new PersonModel("Bohort", "de Gaunes"));
+            Persons.Add(new PersonModel("Léodagan", "de Carmélide"));
+            Persons.Add(new PersonModel("Séli", ""));
+            Persons.Add(new PersonModel("Guenièvre", ""));
+            Persons.Add(new PersonModel("Karadoc", "de Vannes"));
+            Persons.Add(new PersonModel("Kadoc", "de Vannes"));
+            Persons.Add(new PersonModel("Lamorak", "de Galles"));
+            Persons.Add(new PersonModel("Mevanwi", "de Vannes"));
+            Persons.Add(new PersonModel("Alzgar", ""));
+            Persons.Add(new PersonModel("Venec", ""));
+            Persons.Add(new PersonModel("Quarto", ""));
+            Persons.Add(new PersonModel("Horza", ""));
+            Persons.Add(new PersonModel("Wulftan", ""));
 
+            int i = 1;
             foreach (var person in Persons)
+            {
+                person.Id = i++;
                 GenerateRandomExpenseNote(person);
+            }
         }
 
         private void GenerateRandomExpenseNote(PersonModel person)

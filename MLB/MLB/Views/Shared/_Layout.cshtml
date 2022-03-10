@@ -24,7 +24,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        @if (Model != null && Model.Login != null)
+                        @if (Model != null && Model.IsAuthenticated)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="disconnect">Disconnect (@Model.Login)</a>
@@ -32,9 +32,14 @@
                         }
                         else
                         {
-                            <li class="nav-item">
+                            <!--<li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
-                            </li>
+                            </li>-->
+                            <form action="/Login" method="post">
+                                <input type="text" name="username" />
+                                <input type="password" name="password" />
+                                <input type="submit" value="Sign-in" class="btn btn-info btn-sm" />
+                            </form>
                         }
                     </ul>
                 </div>

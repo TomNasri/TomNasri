@@ -3,7 +3,6 @@
 *@
 
 <div>
-    <h3>Login</h3>
     @if (Model.Error != null)
     {
         <p class="alert-warning">@Html.Raw(Model.Error)</p>
@@ -15,11 +14,6 @@
     }
     else
     {
-        <form action="Login" method="post">
-            <input type="text" name="username" /><br />
-            <input type="password" name="password" /><br />
-            <input type="submit" value="Sign-in" />
-        </form>
     }
 </div>
 

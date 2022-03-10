@@ -4,17 +4,20 @@
 
 
 <table>
-
     @foreach (var person in Model.Persons)
     {
         <tr>
             <td>@Html.Raw(person.Firstname) @Html.Raw(person.Lastname)&nbsp;&nbsp;&nbsp;</td>
-            <td><a class="btn btn-outline-success btn-sm" href="/Person">See</a></td>
-            <td><a class="btn btn-outline-danger btn-sm" href="/Person">Delete</a></td>
-        </tr>
+            <td><a class="btn btn-outline-success btn-sm" href="/Person/@Html.Raw(person.Id)">See</a></td>
+            <td><a class="btn btn-outline-danger btn-sm" href="/Person/Delete/@Html.Raw(person.Id)">Delete</a></td>
+</tr>
     }
 </table>
 
-<a class="btn btn-info btn-sm" href="/Person">Add person</a>
-
-
+<form action="/Person" method="post">
+    <span>Firstname</span>
+    <input type="text" name="firstname" />
+    <span>Lastname</span>
+    <input type="text" name="lastname" />
+    <input type="submit" value="Create" class="btn btn-info btn-sm" />
+</form>
