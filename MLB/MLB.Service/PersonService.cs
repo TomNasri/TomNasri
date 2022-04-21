@@ -1,4 +1,5 @@
 ﻿using MLB.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -32,6 +33,14 @@ namespace MLB.Service
         public PersonModel Get(int id)
         {
             return Database.Self.Persons.SingleOrDefault(elt => elt.Id == id);
+        }
+
+        public ExpenseNoteModel AddExpenseNote(PersonModel person, string institution, decimal amount, DateTime date, string path)
+        {
+            var note = new ExpenseNoteModel(person, amount, date, institution, path);
+            person.ExpenseNotes.Add(note);
+
+            return note;
         }
     }
 }

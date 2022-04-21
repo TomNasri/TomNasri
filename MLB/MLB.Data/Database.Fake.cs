@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace MLB.Data
@@ -18,7 +19,7 @@ namespace MLB.Data
             Persons.Add(new PersonModel("Kadoc", "de Vannes"));
             Persons.Add(new PersonModel("Lamorak", "de Galles"));
             Persons.Add(new PersonModel("Mevanwi", "de Vannes"));
-            Persons.Add(new PersonModel("Alzgar", ""));
+            Persons.Add(new PersonModel("Alzagar", ""));
             Persons.Add(new PersonModel("Venec", ""));
             Persons.Add(new PersonModel("Quarto", ""));
             Persons.Add(new PersonModel("Horza", ""));
@@ -37,8 +38,10 @@ namespace MLB.Data
             List<ExpenseNoteModel> list = new List<ExpenseNoteModel>();
             var r = new Random();
 
+            var files = Directory.GetFiles(Path.Combine(Environment.CurrentDirectory, "files"));
+
             for (int i = 0; i < r.Next(2, 40); ++i)
-                list.Add(new ExpenseNoteModel(person, r.Next(8, 45), DateTime.Now.Date.AddDays(-r.Next(1, 40)), GenerateName()));
+                list.Add(new ExpenseNoteModel(person, r.Next(8, 45), DateTime.Now.Date.AddDays(-r.Next(1, 40)), GenerateName(), files[r.Next(0, files.Length - 1)]));
 
             person.ExpenseNotes = list.OrderBy(elt => elt.Date).ToList(); ;
         }

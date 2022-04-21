@@ -3,3 +3,5 @@
 /obj
 /Obj
 *.suo
+/files
+*.v2
