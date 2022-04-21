@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div>
+    @if (Model.Error != null)
+    {
+        <p class="alert-warning">@Html.Raw(Model.Error)</p>
+    }
+
+    @if (Model.IsAuthenticated)
+    {
+        <p class="alert-success">Bravo, vous êtes sur Internet !</p>
+    }
+    else
+    {
+    }
+</div>
+

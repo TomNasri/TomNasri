@@ -1,0 +1,16 @@
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\bc.exe
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\bc.deps.json
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\bc.runtimeconfig.json
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\bc.runtimeconfig.dev.json
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\bc.dll
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\ref\bc.dll
+C:\Users\Tom\source\repos\bc\bin\Debug\net5.0\bc.pdb
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.csproj.AssemblyReference.cache
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.AssemblyInfoInputs.cache
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.AssemblyInfo.cs
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.csproj.CoreCompileInputs.cache
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.dll
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\ref\bc.dll
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.pdb
+C:\Users\Tom\source\repos\bc\obj\Debug\net5.0\bc.genruntimeconfig.cache
